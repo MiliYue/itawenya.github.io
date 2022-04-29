@@ -9,22 +9,29 @@
     <title>Geek招新网站 加入我们</title>
 </head>
 <body>
+    <div id="top"></div>
     <nav>
         <ul id="top-nav">
-            <li id="about">
-                <a href="#center-ab">About US <i class="fas fa-user"></i></a>
-            </li>
             <li id="introduction">
-                <a href="#pass">Introduction <i class="fas fa-angle-down"></i></a>
+                <div id="intro">
+                    <a href="javascript:;" class="intro_a">Introduction <i class="fas fa-angle-down"></i></a>
+                    <div id="QRcode">
+                        <img src="./images/QRcode.png" width="80%">
+                        <p>极客扫码加入Geek</p>
+                    </div>
+                </div>
+            </li>
+            <li id="about">
+                <a href="javascript:;">About US <i class="fas fa-user"></i></a>
             </li>
             <li id="newthread">
                 <a href="https://campus.new-thread.com" target="_blank" >NewThread <i class="fas fa-home"></i></a> 
             </li>
-            <li id="qa">
-                <a href="#center-QA">Q&A <i class="fas fa-comments"></i></a>
-            </li>
             <li id="contact">
-                <a href="#center-cu">Contact Us <i class="fas fa-phone"></i> </a>
+                <a href="javascript:;">Contact Us <i class="fas fa-phone"></i> </a>
+            </li>
+            <li id="qa">
+                <a href="javascript:;">Q&A <i class="fas fa-comments"></i></a>
             </li>
         </ul>
     </nav>
@@ -33,9 +40,11 @@
     <div class="homepage">
         <div id="background-img">
             <img src="./images/首页背景.png" alt="首页背景" width="100%">
-            <div id="geek">
-                <img src="./images/geek.png">
-            </div>
+            <a href="javascript:;">
+                <div id="geek">
+                    <img src="./images/geek.png" alt="">
+                </div>
+            </a>
         </div>
 
     </div>
@@ -44,7 +53,7 @@
         <div id="pass">
             <img src="./images/过渡花纹.png" alt="过渡" width="100%">
             <div id="pass-text">
-                <h1>Introduction <i class="fas fa-angle-down"></i> </h1>
+                <a href="javascript:;"><h1>Introduction <i class="fas fa-angle-down"></i> </h1></a>
             </div>
         </div>
     </div>
@@ -104,10 +113,11 @@
                     涉及计算机图形学的学习，我们使用物理模拟引擎Unity开发我们所追求的世界，一个故事，一个角色，在我们的世界里改变现实，创造新的可能，我们参与，我们改变，我们创造...</p>
             </div>
         </div>
+        <div id="aboutusplace"></div>
     </div>
 
     <div class="about-wrapper clearfix">
-        <p id="center-ab">About Us <i class="fas fa-universal-access"></i> </p>
+        <a href="javascript:;"><p id="center-ab">About Us <i class="fas fa-universal-access"></i> </p></a>
         <div id="about-box" class="clearfix">
             <div id="about-1">
                 <img src="./images/speech.png" alt="" width="55%">
@@ -126,33 +136,70 @@
         <img id="rb" src="./images/右下.png"  width="20%";>
         <img id="lt" src="./images/左上.png"  width="20%";>
         <img id="lb" src="./images/左下.png"  width="20%";>
-        <img id="hudie" src="./images/hudie.png" alt="" width="15%">
+        <img id="hudie" src="./images/hudie.png" alt="" width="15%" title="保持好奇心！">
     </div>
-
+    <div id="contactplace"></div>
     <div class="contact-wrapper clearfix">
-        <p id="center-cu">Contact Us <i class="fas fa-phone"></i> </p>       
+        <a href="javascript:;"><p id="center-cu">Contact Us <i class="fas fa-phone"></i> </p></a>       
         <img id="r-tree" src="./images/树.png" width="17%">
         <img id="l-tree" src="./images/左边的树.png" width="20%">
         <img id="bsl" src="./images/橘色变色龙.png" width="45%">
-        <img id="ladybug" src="./images/七星虫子.png" width="7%">
+        <img id="ladybug" src="./images/七星虫子.png" width="7%" title="虽然并不是每次探索都能有满意的收获 .">
         <img id="leaves" src="./images/yezi1.png" width="5%">
         <div id="request">
             <p>•热爱计算机，具有geek精神，喜欢DIY，动手能力较强</p>
             <p>•有编程/算法/硬件基础为佳(有作品可附上)</p>    
             <p>•有足够的空余时间，热爱思考，对事物有自己的见解</p>    
-            <p>ps:非新思路统招只有通过发送邮件自我介绍后，收到邮件回执后才会被允许进群,在读学生,都可邮件到newthread_geek@outlook.com报名加入.(信中需备注个人基本信息以及意向方向,此招新活动为长期招新)</p>                
+            <p id="ps">ps:非新思路统招只有通过发送邮件自我介绍后，收到邮件回执后才会被允许进群,在读学生,都可邮件到newthread_geek@outlook.com报名加入.(信中需备注个人基本信息以及意向方向,此招新活动为长期招新)</p>                
         </div>
         <div id="a-wrapper">
             <a id="a1" href="https://www.bilibili.com/video/BV1GJ411x7h7" target="_blank">QQ-Group <i class="fas fa-users"></i></a>
-            <a id="a2"  onclick="copyToClip('newthread_geek@outlook.com')">E-mail <i class="fas fa-envelope"></i></a>
+            <a id="a2" href="javascript:;">E-mail <i class="fas fa-envelope"></i></a>
             <a id="a3" href="https://www.bilibili.com/video/BV1GJ411x7h7" target="_blank">Github <i class="fas fa-sitemap"></i></a>
         </div>
     </div>
-
+    <div id="QAplace"></div>
     <div class="QA-wrapper clearfix">
-        <p id="center-QA">More Questions<i class="fas fa-comments"></i></p>
-        <p id="uncomplete">?</p>
-        <p id="why">[等我学好JavaScript再补上😅]</p>
+        <a href="javascript:;"><p id="center-QA">More Questions<i class="fas fa-comments"></i></p></a>
+        <div id="QA-list">
+            <ul id="QA-ul">
+                <li>
+                    <a id="QA-a" class="QA-a" href="javascript:;">1.什么是Geek(极客)？Geek精神又是什么？</a>
+                    <p style="display: none;">拥有好奇之心，改变之力，爱钻研，能折腾。</p>
+                </li>
+                <li>
+                    <a id="QA-a" class="QA-a" href="javascript:;">2.招新是安排在什么时间？</a>
+                    <p style="display: none;">按照惯例，正式招新时间是在9月下旬~10月上旬，不过今年会有一些改动，笔试地
+                        点一般在9号教学楼。 如果想要了解我们，可以加入我们的QQ群，招新具体的安排/变动会在招新群通知。</p>
+                </li>
+                <li>
+                    <a id="QA-a" class="QA-a" href="javascript:;">3.我们有考核吗？考核流程是怎样的呀？</a>
+                    <p style="display: none;">嗯...我们一共有一轮笔试和两轮面试。权衡技术、经验和学习能力，第一轮是一些视野性的题目，淘汰率并不高。第二轮单独面试，
+                        根据你的笔试提出技术相关的问题、兴趣爱好、个人看法。最后一轮群面，首先问及时间分
+                        配上的问题，其次也会向你提出各种奇怪的问题。这一轮中许多题目其实并不难，也无标准答案，重在考察同学们在压力下的逻辑思维。全部通过成为预备成员啦。</p>
+                </li>
+                <li>
+                    <a id="QA-a" class="QA-a" href="javascript:;">4.考核是怎样的形式？</a>
+                    <p style="display: none;">在考核期间每人会拥有一位'长者'带你入门，学习技术与知识，交流经验与想法。完成每周的新人任务后再进行一次考核筛选
+                        后就可以成为Geek组正式成员啦！在考核期必须满足每周30个小时在实验室哦,所以考核期也不可以懈怠哦！</p>
+                </li>
+                <li>
+                    <a id="QA-a" class="QA-a" href="javascript:;">5.进入Geek组之后都有什么福利呢？   </a>
+                    <p style="display: none;">一对一的新人指引，每一个成员都有会一个mentor, 带你初入门槛，与你一同成长，组内管理较宽松,在尊重其他人的前提下可以尽情发挥自己的个性。
+                        打破平淡，与同样疯狂的人把疯狂的idea实现，磨砺耐性、培养思维、成就梦想。Lab设备/网络资源充足，闲暇之余也有组织活动。更有许多的故事等你来听~</p>
+                </li>
+                <li>
+                    <a id="QA-a" class="QA-a" href="javascript:;">6.进入团队会影响我的日常学习吗？</a>
+                    <p style="display: none;">你要知道大学是一个可以自由安排自己学习生活的地方。如果你想在上课之余充实自己、激励自己，最好的方法就是和比自己更优秀的人在一起。团队不缺优秀的
+                        人，而我们也期待同样优秀的你，让我们一起前进！小组里也有不少保研, 考研的前辈们, 大部分都能找到一个平衡点, 而且团队的经历对你日后读研, 工作都大有裨益。</p>
+                </li>
+                <li>
+                    <a id="QA-a" class="QA-a" href="javascript:;">7.老师以及学长学姐们的期望是什么?</a>
+                    <p style="display: none;">我们希望你有很强的自学能力，同时关注新事物、新技术，喜欢挑战，逻辑性强，善于和各种文化的人合作.“每个人都可以做自己想做的事情，每个人的方向不一样。
+                        如果你想做产品或有不错的 idea，那么就可以找志同道合的人一起合作。”</p>
+                </li>
+            </ul>
+        </div>
     </div>
 
     <div class="footer">
@@ -162,8 +209,8 @@
     </div>
 
     <div class="pointer">
-        <div id="pointer1"><p>顶部 <i class="fas fa-chevron-circle-up"></i></p></div>
-        <div id="pointer2"><a href="#"><p style="font-size: 20px;"><i class="fas fa-rocket"></i></p></a></div>
+        <div id="pointer1"><p><i class="fas fa-chevron-circle-up"></i></p></div>
+        <div id="pointer2"><a href="javascript:;"><p><i class="fas fa-rocket"></i></p></a></div>
     </div>
 </body>
 </html>
