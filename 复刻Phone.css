@@ -190,7 +190,7 @@ h3{
     margin-left: 18px;
 }
 #main-text{
-    font-size: 14px;
+    font-size: 23px;
     letter-spacing: 3px;
     margin: 0% 8% 7% 8%;    
 }
@@ -356,7 +356,7 @@ h3{
     line-height: 35px;
 }
 #request :nth-child(4){
-    font-size: 15px;
+    font-size: 20px;
 }
 
 /*设置按钮*/
