@@ -1,3 +1,4 @@
+
 window.onload = function () {
   /*复制邮箱链接 */
   var btn = document.getElementById("a2");
