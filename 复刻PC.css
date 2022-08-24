@@ -299,6 +299,7 @@ h3{
     position: absolute;
     right: 3%;
     bottom: 6%;
+    cursor: pointer; 
 }
 
 /*设置中间关于文字*/
@@ -360,6 +361,7 @@ h3{
     position: absolute;
     bottom: -5%;
     left: -2%;
+    cursor: pointer; 
 }
 #leaves{
     position: absolute;
