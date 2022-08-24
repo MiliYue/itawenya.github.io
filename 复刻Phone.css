@@ -460,47 +460,11 @@ h3{
 }
 
 
-/*设置固定返回块*/
+设置固定返回块
 .pointer{
-    position: fixed;
-    right: 20px;
-    bottom: 80px;
-    height: 66px;
-    width: 71px;
-    overflow: hidden;
+display: none;
 }
 .pointer div{
-    width: 65px;
-    height: 60px;
-    border: 3px solid black;
-    position: absolute;
-    transition: all 0.5s;
-    border-radius: 15px;
-    background-color: aliceblue;
-}
-#pointer1{
-    top: 0px;
-    left: 0px;
-}
-#pointer2{
-    top: 69px;
-    left: 0px;
-}
-.pointer:hover #pointer1{
-    top: -69px;
-    left: 0px;
-}
-.pointer:hover #pointer2{
-    top: 0px;
-    left: 0px;
+    display: none;
 }
 
-.pointer p {
-    font-size: 35px;
-    display: inline-block;
-    line-height: 55px;
-    width: 100%;
-    text-align: center;
-    margin-top: 2%;
-    margin-bottom: 2%;
-}
