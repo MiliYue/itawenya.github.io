@@ -103,6 +103,10 @@ nav{
 #background-img{
     position: relative;
 }
+#background-img img{
+    width: 100%;
+}
+
 #geek{
     position: absolute;
     top: 10%;

@@ -132,6 +132,9 @@ nav{
 #background-img{
     position: relative;
 }
+#background-img img{
+    width: 100%;
+}
 #geek{
     position: absolute;
     top: 10%;
@@ -147,9 +150,6 @@ nav{
 
 
 /*设置过渡*/
-.introduction{
-    margin-top: 15px;
-}
 #pass-text{
     width: 40%;
     margin: -10% auto 0;

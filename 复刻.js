@@ -1,4 +1,32 @@
 window.onload = function () {
+  /*添加图片懒加载*/
+  const imgs = document.getElementsByTagName('img');
+  function lazyLoad(imgs){
+    const clientH = document.documentElement.clientHeight;
+    const clientT = document.documentElement.scrollTop || document.body.scrollTop;
+    for(let i = 0;i<imgs.length;i++){
+      if(clientH + clientT > imgs[i].offsetTop && !imgs[i].src){
+        imgs[i].src = imgs[i].dataset.src;
+      }
+    }
+  };
+  lazyLoad(imgs);
+  window.onscroll = ()=> lazyLoad(imgs); 
+     // 设置节流函数
+     function throttle(fn, delay) {
+      let timer = null;
+      return () => {
+        if(timer) {
+          return;
+        };
+        timer = setTimeout(() => {
+          fn(imgs);
+          timer = null;
+        }, delay)
+      }
+    }
+    // 监听滚动事件，加载后面的图片；
+    window.onscroll = throttle(lazyLoad, 500);
   /*复制邮箱链接 */
   var btn = document.getElementById("a2");
   var content = "newthread_geek@outlook.com";
