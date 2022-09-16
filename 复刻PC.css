@@ -14,7 +14,7 @@ a{
 /*用clearfix类解决高度塌陷*/
 .clearfix::after,
 .clearfix::before{
-    content: " ";
+    content: "";
     display: table;
     clear: both;
 }
