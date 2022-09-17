@@ -115,7 +115,6 @@ if (screen.width > 1000) {
                 };
                 // speed = (target - current) / 10;
                 speed = (target - current) / 1;
-                console.log(speed);
                 speed = speed > 0 ? Math.ceil(speed) : Math.floor(speed);
                 current = current + speed; //0-100
                 if (key == 'opacity') {
@@ -236,6 +235,6 @@ if (screen.width > 1000) {
 };
 
 
-
+console.log("要保持好奇心，虽然不一定每次都会有满意的结果。");
 
 
