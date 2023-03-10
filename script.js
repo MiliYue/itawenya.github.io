@@ -1,3 +1,32 @@
+/*添加图片懒加载*/
+const imgs = document.getElementsByTagName('img');
+function lazyLoad(imgs) {
+    const clientH = document.documentElement.clientHeight;
+    const clientT = document.documentElement.scrollTop || document.body.scrollTop;
+    for (let i = 0; i < imgs.length; i++) {
+        if (clientH + clientT > imgs[i].offsetTop && !imgs[i].src) {
+            imgs[i].src = imgs[i].dataset.src;
+        }
+    }
+};
+lazyLoad(imgs);
+window.onscroll = () => lazyLoad(imgs);
+// 设置节流函数
+function throttle(fn, delay) {
+    let timer = null;
+    return () => {
+        if (timer) {
+            return;
+        };
+        timer = setTimeout(() => {
+            fn(imgs);
+            timer = null;
+        }, delay)
+    }
+}
+// 监听滚动事件，加载后面的图片；
+window.onscroll = throttle(lazyLoad, 500);
+
 /*问答 */
 var ul = document.getElementById("QA-ul");
 var ulChildren = ul.children;
@@ -46,33 +75,33 @@ btn.onclick = function copyToClip() {
 /**旋转木马**/
 if (screen.width > 1000) {
     var json = [{ //  0
-        width:25,
-        top:7,
-        left:7,
+        width: 25,
+        top: 7,
+        left: 7,
         opacity: 0.7,
         zIndex: 2
     }, { // 1
-        width:25,
-        top:7,
-        left:18,
+        width: 25,
+        top: 7,
+        left: 18,
         opacity: 0.9,
         zIndex: 3
     }, { // 2
-        top:7,
-        width:26,
-        left:36,
+        top: 7,
+        width: 26,
+        left: 36,
         opacity: 1,
         zIndex: 4
     }, { // 3
-        width:25,
-        top:7,
-        left:55,
+        width: 25,
+        top: 7,
+        left: 55,
         opacity: 0.9,
         zIndex: 3
     }, { //4
-        width:25,
-        top:7,
-        left:68,
+        width: 25,
+        top: 7,
+        left: 68,
         opacity: 0.7,
         zIndex: 2
     }];
@@ -107,7 +136,7 @@ if (screen.width > 1000) {
             var speed = 0; //记录速度
             for (var key in json) {
                 if (key == 'opacity') {
-                    target = Math.round(json['opacity'] *10) //0-100
+                    target = Math.round(json['opacity'] * 10) //0-100
                     current = getStyle(obj, 'opacity') * 2 //0-100                  
                 } else {
                     target = parseInt(json[key]);
@@ -216,20 +245,21 @@ if (screen.width > 1000) {
     aqa.onclick = function () {
         qa.scrollIntoView({ behavior: "smooth" });
     };
-/*屋顶*/
-    window.addEventListener('scroll',(move)=>{
-        const evt = move||window.event
+    /*屋顶*/
+    window.addEventListener('scroll', (move) => {
+        const evt = move || window.event
         evt.preventDefault()
         let homeinner = document.getElementById("homeinner");
         let scrollTop = document.documentElement.scrollTop;
         let homeouter = document.getElementById("homeouter");
-        if(scrollTop>=document.documentElement.scrollHeight/13&&
-            scrollTop<document.documentElement.scrollHeight*13/13){
+        if (scrollTop >= document.documentElement.scrollHeight / 13 &&
+            scrollTop < document.documentElement.scrollHeight * 13 / 13) {
             document.getElementById("homeouter").classList.add("topOfTheMiddle3")
         }
-        if(scrollTop == 0 || scrollTop>=document.documentElement.scrollHeight*2.5/13){           
+        if (scrollTop == 0 || scrollTop >= document.documentElement.scrollHeight * 2.5 / 13) {
             let dom = document.getElementById("homeouter")
-            dom.classList.remove("topOfTheMiddle3") 
+            dom.classList.remove("topOfTheMiddle3")
         }
     })
 };
+console.log("要保持好奇心，虽然不一定每次都会有满意的结果。");
