@@ -261,5 +261,23 @@ if (screen.width > 1000) {
             dom.classList.remove("topOfTheMiddle3")
         }
     })
+    const pointer = document.getElementById("pointer")
+    // 监听鼠标滚轮事件
+    window.addEventListener('scroll', () => {
+        // 获取网页整体高度
+        const pageHeight = document.documentElement.scrollHeight;
+
+        // 获取滚动条当前位置
+        const scrollPosition = window.scrollY;
+
+        // 判断是否滚动到指定位置（800px之后）
+        if (scrollPosition >= 800 && scrollPosition < pageHeight) {
+            // 设置div的样式为可见
+            pointer.style.display = 'block';
+        } else {
+            // 设置div的样式为不可见
+            pointer.style.display = 'none';
+        }
+    });
 };
 console.log("要保持好奇心，虽然不一定每次都会有满意的结果。");
